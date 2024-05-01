@@ -32,6 +32,15 @@ export class User {
   @Column()
   password: string;
 
+  @Column()
+  created_at: Date;
+
+  @Column()
+  update_at: Date;
+
+  @Column()
+  role_id: string;
+
   @OneToOne((type) => Profile, (profile) => profile.user_id)
   profile: Profile[];
 

@@ -19,8 +19,8 @@ export class Drug {
   @Column()
   stock: number;
 
-  @Column()
-  drug_summary: Text;
+  @Column('text')
+  drug_summary: string;
 
   @Column()
   buy_price: number;

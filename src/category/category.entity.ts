@@ -9,8 +9,8 @@ export class Category {
   @Column()
   category_name: string;
 
-  @Column()
-  description: Text;
+  @Column('text')
+  description: string;
 
   @OneToMany((type) => Drug, (drug) => drug.category_id)
   drug: Drug[];

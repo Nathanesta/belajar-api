@@ -21,8 +21,8 @@ export class Doctor {
   @Column()
   graduate_of: string;
 
-  @Column()
-  bio: Text;
+  @Column('text')
+  bio: string;
 
   @Column()
   document_id: number;

@@ -31,14 +31,14 @@ export class Record {
   @Column()
   conditions: string;
 
-  @Column()
-  complaint: Text;
+  @Column('text')
+  complaint: string;
 
-  @Column()
-  history_of_illness: Text;
+  @Column('text')
+  history_of_illness: string;
 
-  @Column()
-  solution: Text;
+  @Column('text')
+  solution: string;
 
   @Column()
   clinic_id: number;
