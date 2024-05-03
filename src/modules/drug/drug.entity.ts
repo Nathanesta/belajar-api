@@ -1,0 +1,42 @@
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToMany,
+  OneToMany,
+} from 'typeorm';
+import { MedicalRecordDrug } from 'src/modules/medical_record_drug/medical_record_drug.entity';
+import { Review } from 'src/modules/review/review.entity';
+
+@Entity()
+export class Drug {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  drug_name: string;
+
+  @Column()
+  stock: number;
+
+  @Column('text')
+  drug_summary: string;
+
+  @Column()
+  buy_price: number;
+
+  @Column()
+  sell_price: number;
+
+  @Column()
+  category_id: number;
+
+  @ManyToMany(
+    (type) => MedicalRecordDrug,
+    (medical_record_drug) => medical_record_drug.drug_id,
+  )
+  medical_record_drug: MedicalRecordDrug[];
+
+  @OneToMany((type) => Review, (review) => review.drug_id)
+  drug: Drug[];
+}
