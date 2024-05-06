@@ -1,6 +1,5 @@
 import { DataSource } from 'typeorm';
 import { Seeder, SeederFactoryManager } from 'typeorm-extension';
-import { Review } from 'src/modules/review/review.entity';
 import { Role } from 'src/modules/role/role.entity';
 
 export default class RoleSeeder implements Seeder {

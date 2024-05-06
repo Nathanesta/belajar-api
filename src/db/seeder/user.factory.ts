@@ -1,6 +1,5 @@
 import { setSeederFactory } from 'typeorm-extension';
 import { faker } from '@faker-js/faker';
-import { Schedule } from 'src/modules/schedule/schedule.entity';
 import { User } from 'src/modules/user/user.entity';
 
 export default setSeederFactory(User, (faker) => {
@@ -13,6 +12,5 @@ export default setSeederFactory(User, (faker) => {
   user.created_at = faker.date.recent();
   user.update_at = faker.date.recent();
   user.role_id = faker.datatype.number();
-
   return user;
 });
