@@ -2,7 +2,7 @@ import { DataSource } from 'typeorm';
 import { Seeder, SeederFactoryManager } from 'typeorm-extension';
 import { MedicalRecordDrug } from 'src/modules/medical_record_drug/medical_record_drug.entity';
 
-export default class medicalRecordDrugSeeder implements Seeder {
+export default class MedicalRecordDrugSeeder implements Seeder {
   public async run(
     dataSource: DataSource,
     factoryManager: SeederFactoryManager,

@@ -4,7 +4,7 @@ import { Clinic } from 'src/modules/clinic/clinic.entity';
 
 export default setSeederFactory(Clinic, (faker) => {
   const clinic = new Clinic();
-  clinic.clinic_name = faker.location.country();
+  clinic.clinic_name = faker.company.name();
   clinic.address = faker.location.streetAddress();
   return clinic;
 });
