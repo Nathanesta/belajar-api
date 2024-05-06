@@ -10,7 +10,7 @@ export class Bank {
   bank_name: string;
 
   @Column()
-  account_number: number;
+  account_number: string;
 
   @Column()
   bank_images: string;

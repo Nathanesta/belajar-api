@@ -7,7 +7,7 @@ export default setSeederFactory(Reply, (faker) => {
   reply.reply_text = faker.lorem.text();
   reply.reply_date = faker.date.anytime();
   reply.review_id = faker.datatype.number();
-  reply.user_id = faker.datatype.number();
+  reply.user_id = 1;
 
   return reply;
 });

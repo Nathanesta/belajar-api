@@ -9,6 +9,6 @@ export default setSeederFactory(Drug, (faker) => {
   drug.drug_summary = faker.lorem.sentence();
   // drug.buy_price = faker.commerce.price();
   // drug.sell_price = faker.commerce.price();
-  drug.category_id = faker.datatype.number();
+  drug.category_id = 1;
   return drug;
 });
