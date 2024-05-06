@@ -20,10 +20,10 @@ export class City {
   region_id: number;
 
   @Column()
-  latitude: string;
+  latitude: number;
 
   @Column()
-  longitude: string;
+  longitude: number;
 
   @OneToMany((type) => District, (district) => district.city_id)
   district: District[];

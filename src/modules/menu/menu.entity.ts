@@ -6,7 +6,7 @@ export class Menu {
   id: number;
 
   @Column()
-  role_id: string;
+  role_id: number;
 
   @Column()
   menu_name: string;
