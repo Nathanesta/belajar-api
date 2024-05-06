@@ -1,14 +1,14 @@
 import { DataSource } from 'typeorm';
 import { Seeder, SeederFactoryManager } from 'typeorm-extension';
-import { Doctor } from 'src/modules/doctor/doctor.entity';
+import { Region } from 'src/modules/region/region.entity';
 
-export default class DoctorSeeder implements Seeder {
+export default class RegionSeeder implements Seeder {
   public async run(
     dataSource: DataSource,
     factoryManager: SeederFactoryManager,
   ): Promise<any> {
-    const doctorFactory = factoryManager.get(Doctor);
+    const regionFactory = factoryManager.get(Region);
 
-    const doctor = await doctorFactory.saveMany(7);
+    const region = await regionFactory.saveMany(7);
   }
 }
