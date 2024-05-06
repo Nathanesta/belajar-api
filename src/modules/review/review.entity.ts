@@ -22,7 +22,7 @@ export class Review {
   drug_id: number;
 
   @Column()
-  user_id: number;
+  user_id: 1;
 
   @OneToMany((type) => Reply, (reply) => reply.review_id)
   reply: Reply[];

@@ -10,6 +10,6 @@ export default setSeederFactory(Doctor, (faker) => {
   doctor.specialist = faker.commerce.department();
   doctor.graduate_of = faker.company.name();
   doctor.bio = faker.person.bio();
-  doctor.document_id = faker.datatype.number();
+  doctor.document_id = 1;
   return doctor;
 });

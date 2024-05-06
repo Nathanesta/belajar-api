@@ -6,6 +6,6 @@ import { MedicalRecordDrug } from 'src/modules/medical_record_drug/medical_recor
 export default setSeederFactory(MedicalRecordDrug, (faker) => {
   const medicalRecordDrug = new MedicalRecordDrug();
   medicalRecordDrug.medical_record_id = faker.datatype.number();
-  medicalRecordDrug.drug_id = faker.datatype.number();
+  medicalRecordDrug.drug_id = 1;
   return medicalRecordDrug;
 });
