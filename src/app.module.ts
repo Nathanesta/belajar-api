@@ -1,17 +1,14 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { TugasController } from './modules/tugas/tugas.controller';
-import { DataSourceModule } from './datasource.module';
-import { CountryService } from './modules/country/country.service';
-import { CountryController } from './modules/country/country.controller';
+import { CountryModule } from './modules/country/country.module';
+import { typeormConnectionConfig } from './env';
+import { DataSourceModule } from './datasoruce.module';
 
 @Module({
   imports: [
-    DataSourceModule
+    TypeOrmModule.forRoot(typeormConnectionConfig),
+    DataSourceModule,
+    CountryModule,
   ],
-  controllers: [AppController, TugasController, CountryController],
-  providers: [AppService, CountryService],
 })
 export class AppModule {}

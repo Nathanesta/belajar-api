@@ -3,67 +3,19 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 import { runSeeders, SeederOptions } from 'typeorm-extension';
 import CountrySeeder from './seeder/country.seeder';
 import countryFactory from './seeder/country.factory';
-import { Bank } from '../modules/bank/bank.entity';
-import { Category } from '../modules/category/category.entity';
-import { City } from '../modules/city/city.entity';
-import { Clinic } from '../modules/clinic/clinic.entity';
-import { Country } from '../modules/country/country.entity';
-import { District } from '../modules/district/district.entity';
-import { Doctor } from '../modules/doctor/doctor.entity';
-import { Document } from '../modules/document/document.entity';
-import { Drug } from '../modules/drug/drug.entity';
-import { MedicalRecordDrug } from '../modules/medical_record_drug/medical_record_drug.entity';
-import { Menu } from '../modules/menu/menu.entity';
-import { Payment } from '../modules/payment/payment.entity';
-import { Profile } from '../modules/profile/profile.entity';
-import { Record } from '../modules/record/record.entity';
-import { Region } from '../modules/region/region.entity';
-import { Reply } from '../modules/reply/reply.entity';
-import { Review } from '../modules/review/review.entity';
-import { Role } from '../modules/role/role.entity';
-import { Room } from '../modules/room/room.entity';
-import { Schedule } from '../modules/schedule/schedule.entity';
-import { Transaction } from '../modules/transaction/transaction.entity';
-import { User } from '../modules/user/user.entity';
-import { Village } from '../modules/village/village.entity';
-import bankFactory from './seeder/bank.factory';
-import BankSeeder from './seeder/bank.seeder';
+import { DATABASE_HOST, DATABASE_PORT, DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_NAME, DATABASE_ENTITIES } from 'src/env';
 
 const options: DataSourceOptions & SeederOptions = {
   type: 'mysql',
-  host: 'localhost',
-  port: 3306,
-  username: 'root',
-  password: '',
-  database: 'klinik_db',
-  entities: [
-    Bank,
-    Category,
-    City,
-    Clinic,
-    Country,
-    District,
-    Doctor,
-    Document,
-    Drug,
-    MedicalRecordDrug,
-    Menu,
-    Payment,
-    Profile,
-    Record,
-    Region,
-    Reply,
-    Review,
-    Role,
-    Room,
-    Schedule,
-    Transaction,
-    User,
-    Village,
-  ],
+  host: DATABASE_HOST,
+  port: DATABASE_PORT,
+  username: DATABASE_USERNAME,
+  password: DATABASE_PASSWORD,
+  database: DATABASE_NAME,
+  entities: DATABASE_ENTITIES,
   synchronize: true,
-  seeds: [CountrySeeder, BankSeeder],
-  factories: [countryFactory, bankFactory],
+  seeds: [CountrySeeder],
+  factories: [countryFactory],
 };
 
 export const dataSource = {

@@ -5,6 +5,6 @@ import { Menu } from 'src/modules/menu/menu.entity';
 export default setSeederFactory(Menu, (faker) => {
   const menu = new Menu();
   menu.menu_name = faker.random.word();
-  menu.role_id = faker.datatype.number();
+  // menu.role_id = faker.datatype.number();
   return menu;
 });
