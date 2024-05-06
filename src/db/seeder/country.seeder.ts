@@ -1,6 +1,6 @@
-import { Country } from "src/modules/country/country.entity";
-import { DataSource } from "typeorm";
-import { Seeder, SeederFactoryManager } from "typeorm-extension";
+import { DataSource } from 'typeorm';
+import { Seeder, SeederFactoryManager } from 'typeorm-extension';
+import { Country } from 'src/modules/country/country.entity';
 
 export default class CountrySeeder implements Seeder {
   public async run(

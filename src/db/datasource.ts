@@ -26,6 +26,8 @@ import { Schedule } from '../modules/schedule/schedule.entity';
 import { Transaction } from '../modules/transaction/transaction.entity';
 import { User } from '../modules/user/user.entity';
 import { Village } from '../modules/village/village.entity';
+import bankFactory from './seeder/bank.factory';
+import BankSeeder from './seeder/bank.seeder';
 
 const options: DataSourceOptions & SeederOptions = {
   type: 'mysql',
@@ -33,7 +35,7 @@ const options: DataSourceOptions & SeederOptions = {
   port: 3306,
   username: 'root',
   password: '',
-  database: 'belajarnest',
+  database: 'klinik_db',
   entities: [
     Bank,
     Category,
@@ -60,8 +62,8 @@ const options: DataSourceOptions & SeederOptions = {
     Village,
   ],
   synchronize: true,
-  seeds: [CountrySeeder],
-  factories: [countryFactory],
+  seeds: [CountrySeeder, BankSeeder],
+  factories: [countryFactory, bankFactory],
 };
 
 export const dataSource = {
