@@ -22,11 +22,11 @@ export class Drug {
   @Column('text')
   drug_summary: string;
 
-  @Column()
-  buy_price: number;
+  @Column('bigint')
+  buy_price: string;
 
-  @Column()
-  sell_price: number;
+  @Column('bigint')
+  sell_price: string;
 
   @Column()
   category_id: number;
