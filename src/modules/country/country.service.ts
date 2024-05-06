@@ -1,15 +1,33 @@
 import { Injectable } from '@nestjs/common';
-import { CountryInterface } from './country.interface';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Country } from './country.entity';
 
 @Injectable()
 export class CountryService {
-  private readonly countries: CountryInterface[] = [];
+  constructor(
+    @InjectRepository(Country)
+    private readonly countryRepository : Repository<Country>,
+  ) {}
 
-  create(country: CountryInterface) {
-    this.countries.push(country);
+  async findAll(): Promise<Country[]> {
+    return this.countryRepository.find();
   }
 
-  findAll(): CountryInterface[] {
-    return this.countries;
+  async findById(id): Promise<Country> {
+    return this.countryRepository.findOne(id);
+  }
+
+  async create(country: Country): Promise<Country> {
+    return this.countryRepository.save(country);
+  }
+
+  async update(id, country: Country): Promise<Country> {
+    await this.countryRepository.update(id, country);
+    return this.countryRepository.findOne(id);
+  }
+
+  async delete(id: number): Promise<void> {
+    await this.countryRepository.delete(id);
   }
 }
