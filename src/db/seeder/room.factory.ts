@@ -6,6 +6,6 @@ export default setSeederFactory(Room, (faker) => {
   const room = new Room();
   room.room_name = faker.lorem.word();
   room.description = faker.lorem.text();
-  room.clinic_id = faker.datatype.number();
+  room.clinic_id = 1;
   return room;
 });

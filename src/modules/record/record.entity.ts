@@ -13,7 +13,7 @@ export class Record {
   vistting_time: Date;
 
   @Column()
-  transportation: number;
+  transportation: string;
 
   @Column()
   reference: string;

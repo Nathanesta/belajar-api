@@ -6,6 +6,6 @@ import { Village } from 'src/modules/village/village.entity';
 export default setSeederFactory(Village, (faker) => {
   const village = new Village();
   village.village_name = faker.location.county();
-  village.district_id = faker.datatype.number();
+  village.district_id = 1;
   return village;
 });

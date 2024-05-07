@@ -7,7 +7,7 @@ export default setSeederFactory(Schedule, (faker) => {
   schedule.date = faker.date.anytime();
   schedule.check_time = faker.date.anytime();
   schedule.complaint = faker.lorem.text();
-  schedule.doctor_id = faker.datatype.number();
-  schedule.user_id = faker.datatype.number();
+  schedule.doctor_id = 1;
+  schedule.user_id = 1;
   return schedule;
 });

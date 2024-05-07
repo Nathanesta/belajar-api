@@ -7,7 +7,7 @@ export class Transaction {
   id: number;
 
   @Column()
-  code: string;
+  code: number;
 
   @Column()
   consultation: string;

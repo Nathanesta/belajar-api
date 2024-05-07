@@ -11,6 +11,6 @@ export default setSeederFactory(User, (faker) => {
   user.password = faker.internet.password();
   user.created_at = faker.date.recent();
   user.update_at = faker.date.recent();
-  user.role_id = faker.datatype.number();
+  user.role_id = 1;
   return user;
 });
