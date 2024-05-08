@@ -28,32 +28,32 @@ export const DATABASE_HOST = 'localhost';
 export const DATABASE_PORT = 3306;
 export const DATABASE_USERNAME = 'root';
 export const DATABASE_PASSWORD = '';
-export const DATABASE_NAME = 'belajarnest';
+export const DATABASE_NAME = 'klinik_db';
 export const DATABASE_ENTITIES = [
-                                    Bank,
-                                    Category,
-                                    City,
-                                    Clinic,
-                                    Country,
-                                    District,
-                                    Doctor,
-                                    Document,
-                                    Drug,
-                                    MedicalRecordDrug,
-                                    Menu,
-                                    Payment,
-                                    Profile,
-                                    Record,
-                                    Region,
-                                    Reply,
-                                    Review,
-                                    Role,
-                                    Room,
-                                    Schedule,
-                                    Transaction,
-                                    User,
-                                    Village,
-                                  ];
+  Bank,
+  Category,
+  City,
+  Clinic,
+  Country,
+  District,
+  Doctor,
+  Document,
+  Drug,
+  MedicalRecordDrug,
+  Menu,
+  Payment,
+  Profile,
+  Record,
+  Region,
+  Reply,
+  Review,
+  Role,
+  Room,
+  Schedule,
+  Transaction,
+  User,
+  Village,
+];
 
 export const typeormConnectionConfig: TypeOrmModuleOptions = {
   type: 'mysql',

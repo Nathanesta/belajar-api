@@ -15,7 +15,7 @@ export default setSeederFactory(Record, (faker) => {
   record.complaint = faker.random.word();
   record.history_of_illness = faker.random.word();
   record.solution = faker.random.word();
-  record.user_id = faker.datatype.number();
-  record.clinic_id = faker.datatype.number();
+  record.user_id = 1;
+  record.clinic_id = 1;
   return record;
 });
