@@ -39,7 +39,7 @@ export class User {
   update_at: Date;
 
   @Column()
-  role_id: string;
+  role_id: number;
 
   @OneToOne((type) => Profile, (profile) => profile.user_id)
   profile: Profile[];

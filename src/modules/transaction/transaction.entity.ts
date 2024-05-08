@@ -7,16 +7,16 @@ export class Transaction {
   id: number;
 
   @Column()
-  code: string;
+  code: number;
 
   @Column()
   consultation: string;
 
   @Column()
-  handling_fees: number;
+  handling_fees: string;
 
-  @Column()
-  room_cost: number;
+  @Column('bigint')
+  room_cost: string;
 
   @Column()
   payment_id: number;
